@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Cầu Thủ</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .search-box {
+      padding: 20px;
+      background: #222;
+      margin-bottom: 20px;
+    }
+    .search-box input, .search-box select, .search-box button {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 4px;
+      border: none;
+    }
+    .search-box button {
+      background: #0077cc;
+      color: white;
+      cursor: pointer;
+    }
+    .results {
+      padding: 20px;
+      background: #111;
+      border-radius: 6px;
+    }
+    .player-card {
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #2b2b2b;
+      border-radius: 4px;
+    }
+    .player-card strong {
+      font-size: 18px;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-box">
+    <input type="text" id="name" placeholder="Tên cầu thủ">
+    <select id="season">
+      <option value="-">Mùa</option>
+      <option>22TOTY</option>
+      <option>23UCL</option>
+    </select>
+    <select id="league">
+      <option value="-">Giải</option>
+      <option>Premier League</option>
+      <option>La Liga</option>
+    </select>
+    <select id="team">
+      <option value="-">Đội</option>
+      <option>Man City</option>
+      <option>Real Madrid</option>
+    </select>
+    <select id="nation">
+      <option value="-">Quốc gia</option>
+      <option>Việt Nam</option>
+      <option>Brazil</option>
+    </select>
+    <select id="position">
+      <option value="-">Vị trí</option>
+      <option>ST</option>
+      <option>CM</option>
+      <option>GK</option>
+    </select>
+    <button onclick="searchPlayer()">Search</button>
+  </div>
+
+  <div class="results">
+    <h3>Kết quả tìm kiếm:</h3>
+    <div id="results-list"></div>
+  </div>
+
+  <script>
+    function searchPlayer() {
+      const name = document.getElementById("name").value || "Chưa rõ";
+      const season = document.getElementById("season").value;
+      const league = document.getElementById("league").value;
+      const team = document.getElementById("team").value;
+      const nation = document.getElementById("nation").value;
+      const position = document.getElementById("position").value;
+
+      const resultsDiv = document.getElementById("results-list");
+
+      // tạo 1 card mới
+      const card = document.createElement("div");
+      card.classList.add("player-card");
+      card.innerHTML = `
+        <strong>${name}</strong><br>
+        Mùa: ${season} | Giải: ${league} | Đội: ${team} | Quốc gia: ${nation} | Vị trí: ${position}
+      `;
+
+      resultsDiv.appendChild(card);
+
+      // clear input tên cầu thủ
+      document.getElementById("name").value = "";
+    }
+  </script>
+
+</body>
+</html>
