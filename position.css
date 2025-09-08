@@ -1,7 +1,8 @@
 /* Nền tối tổng thể */
 body {
   background: #111827;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: #e5e7eb;
   margin: 20px;
 }

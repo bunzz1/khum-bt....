@@ -2,208 +2,192 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>FIFA/FC Card Player</title>
+  <title>Tìm cầu thủ FO4</title>
+    <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0f2027;
+      background: #0d1117;
       color: #fff;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Header */
-    .header {
+    /* HEADER */
+    header {
+      background: #161b22;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #111;
       padding: 10px 20px;
+      border-bottom: 2px solid #30363d;
     }
 
     .logo {
-      font-size: 22px;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
     }
 
-    .logo span {
-      color: limegreen;
+    .logo img {
+      height: 35px;
+      margin-right: 10px;
+      cursor: pointer;
     }
 
-    .lang-select {
-      background: #222;
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
       color: #fff;
-      border: none;
-      padding: 5px;
-      border-radius: 3px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: 0.2s;
     }
 
-    /* Search bar */
+    .menu a:hover {
+      background: #1f6feb;
+    }
+
+    /* CONTAINER */
+    .container {
+      width: 1000px;
+      margin: 30px auto;
+      background: #161b22;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
     .search-bar {
       display: flex;
       gap: 10px;
-      padding: 15px;
-      background-color: #1a1a1a;
+      margin-bottom: 15px;
     }
 
-    .search-input {
+    .search-bar input {
       flex: 1;
       padding: 8px;
       border: none;
-      border-radius: 4px;
-    }
-
-    .btn {
-      padding: 8px 14px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .btn-search {
-      background: #007bff;
-      color: #fff;
-    }
-
-    .btn-less {
-      background: #444;
-      color: #fff;
-    }
-
-    /* Filters */
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px 15px;
-      background-color: #141414;
-    }
-
-    .filters select, .filters input {
-      padding: 6px;
-      border-radius: 4px;
-      border: none;
-      background: #222;
-      color: #fff;
-    }
-
-    /* Seasons */
-    .seasons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 15px;
-      background: #111;
-      justify-content: flex-start;
-    }
-
-    .season-card {
-      width: 80px;
-      height: 40px;
-      background: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       border-radius: 5px;
+    }
+
+    .search-bar button {
+      background: #1f6feb;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: white;
       cursor: pointer;
-      font-size: 14px;
       font-weight: bold;
     }
 
-    .season-card:hover {
-      background: #555;
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
     }
 
-    /* Recently viewed */
-    .recently-viewed {
-      margin-top: 15px;
-      background: #1a1a1a;
-      padding: 10px;
+    .filters select {
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
     }
 
-    .recently-viewed h3 {
-      margin: 0 0 10px;
-      font-size: 16px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 5px;
-    }
-
-    .player {
+    .positions {
       display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 20px;
     }
 
-    .player img {
-      width: 30px;
-      height: 30px;
-      border-radius: 4px;
+    .positions button {
+      background: #30363d;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
     }
 
-    .player-name {
-      font-size: 14px;
-    }
+.mua-the {
+  display: flex;
+  gap: 20px;         /* khoảng cách giữa các thẻ */
+  align-items: center; 
+}
+
+.mua {
+  text-align: center;
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mua img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.mua p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mua-the-center {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  </style>
+
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">FIFA<span>Player</span></div>
-    <select class="lang-select">
-      <option>VN</option>
-    </select>
-  </div>
-
-  <!-- Search -->
-  <div class="search-bar">
-    <input class="search-input" type="text" placeholder="Tìm cầu thủ...">
-    <button class="btn btn-search">SEARCH</button>
-    <button class="btn btn-less">LESS</button>
-  </div>
-
-  <!-- Filters -->
-  <div class="filters">
-    <select>
-      <option>Giải đấu</option>
-    </select>
-    <select>
-      <option>Đội</option>
-    </select>
-    <select>
-      <option>Quốc gia</option>
-    </select>
-    <select>
-      <option>Vị trí</option>
-    </select>
-  </div>
-
-  <!-- Seasons -->
-  <div class="seasons">
-    <div class="season-card" style="background:#1e90ff">25TOTS</div>
-    <div class="season-card" style="background:#800080">DCB</div>
-    <div class="season-card" style="background:#228b22">HG</div>
-    <div class="season-card" style="background:#b22222">CC</div>
-    <div class="season-card" style="background:#daa520">CH</div>
-  </div>
-
-  <!-- Recently Viewed -->
-  <div class="recently-viewed">
-    <h3>Recently Viewed</h3>
-    <div class="player">
-      <img src="https://via.placeholder.com/30" alt="">
-      <div class="player-name">Zinedine Zidane</div>
+      <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="spck.html"><img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="Logo"></a>
     </div>
-    <div class="player">
-      <img src="https://via.placeholder.com/30" alt="">
-      <div class="player-name">Nacho Fernández</div>
+    <nav class="menu">
+      <a href="spck.html">🏠Trang chủ</a>
+      <a href="index.html">📰Tin tức</a>
+    </nav>
+  </header>
+ </div>
+    <!-- Seasons -->
+<div class="container">
+  <h3 style="margin-top:0;">Các mùa thẻ</h3>
+  <div class="mua-the-center">
+    <div class="mua">
+      <a href="./CH.html">
+        <img src="https://i.fo4players.com/property/class/class2011.png?t=20250828" alt="CH">
+        <p>CH</p>
+      </a>
     </div>
-    <div class="player">
-      <img src="https://via.placeholder.com/30" alt="">
-      <div class="player-name">Michael Essien</div>
+    <div class="mua">
+      <a href="./DCB.html">
+        <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828" alt="DCB">
+        <p>DCB</p>
+      </a>
+    </div>
+    <div class="mua">
+      <a href="./25TOTS.html">
+        <img src="https://i.fo4players.com/property/class/class1992.jpg?t=20250627" alt="25TOTS">
+        <p>25TOTS</p>
+      </a>
     </div>
   </div>
-
+</div>
 </body>
 </html>

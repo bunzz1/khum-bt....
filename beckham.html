@@ -2,9 +2,18 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Cristiano Ronaldo - Dramatic Comebacks</title>
+  <title>David Beckham - Dramatic Comebacks</title>
   <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
   <style>
+    body {
+      background: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
     .header-bar {
       width: 100%;
       background: #1a1a1a;
@@ -29,7 +38,7 @@
     }
     .nav {
       display: flex;
-      gap: 30px;
+      gap: 30px; /* tăng khoảng cách giữa các mục */
       align-items: center;
     }
     .nav a {
@@ -47,13 +56,12 @@
       color: #000;
       box-shadow: 0 2px 8px rgba(255,204,0,0.2);
     }
-    body {
-      background: #111;
-      font-family: Arial, sans-serif;
-      color: #fff;
+
+    /* MAIN CONTENT */
+    .container {
       display: flex;
       justify-content: center;
-      padding: 80px 20px 20px 20px; /* thêm top padding để tránh che bởi header */
+      padding: 100px 20px 20px; /* chừa khoảng cho header */
     }
     .card {
       width: 800px;
@@ -63,7 +71,7 @@
       padding: 20px;
       position: relative;
     }
-    .header {
+    .player-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -135,75 +143,78 @@
   </style>
 </head>
 <body>
-  <!-- HEADER FC ONLINE -->
-  <div class="header-bar">
-    <div class="logo">
-      <a href="spck.html">
-        <img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="FC Online Logo">
-      </a>
-    </div>
-    <div class="nav">
-      <a href="spck.html">Trang chủ</a>
-      <a href="./news/index.html">Tin tức</a>
-    </div>
+<!-- HEADER -->
+<div class="header-bar">
+  <div class="logo">
+    <a href="spck.html">
+      <img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="FC Online Logo">
+    </a>
   </div>
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="player-info">
-        <h2>Cristiano Ronaldo <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828" class="badgedss y825"></h2> 
-       <span>ST 119 | LW 117</span><br>
-        <span>AL NASSR | PORTUGAL 🇵🇹</span><br>
-        <span>5.2.1985 </span><br>
-        <span>187cm | 85kg | 5⭐ TECH</span>
-        <br><span>LEFT FOOT: ⭐⭐⭐⭐⭐</span>
-        <span>RIGHT FOOT: ⭐⭐⭐⭐⭐</span>
+  <div class="nav">
+    <a href="spck.html">Trang chủ</a>
+    <a href="./news/index.html">Tin tức</a>
+  </div>
+</div>
+ 
+  <div class="container">
+    <div class="card">
+      <!-- Player Header -->
+      <div class="player-header">
+        <div class="player-info">
+          <h2>David Beckham <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828"></h2> 
+          <span>CF 119 | ST 119</span><br>
+          <span>REAL MADRID | ENGLAND 🇪🇳</span><br>
+          <span>25.1.1942 </span><br>
+          <span>175cm | 85kg | 5⭐ TECH </span>
+          <br><span>LEFT FOOT: ⭐⭐⭐⭐</span>
+          <span>RIGHT FOOT: ⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="player-photo">
+          <img src="https://s1.fifaaddict.com/fo4/players/jgpjoqmbn.png?20250613" alt="David Beckham">
+        </div>
       </div>
-      <div class="player-photo">
-        <img src="https://s1.fifaaddict.com/fo4/players/zlmnbddwg.png?20250613" alt="Cristiano Ronaldo">
+
+      <!-- Overall Stats -->
+      <div class="stats-overall">
+        <div><h3>120</h3><span>Tốc độ</span></div>
+        <div><h3>121</h3><span>Sút</span></div>
+        <div><h3>111</h3><span>Chuyền</span></div>
+        <div><h3>118</h3><span>Rê bóng</span></div>
+        <div><h3>62</h3><span>Phòng thủ</span></div>
+        <div><h3>112</h3><span>Thể lực</span></div>
       </div>
-    </div>
 
-    <!-- Overall Stats -->
-    <div class="stats-overall">
-      <div><h3>120</h3><span>Tốc độ</span></div>
-      <div><h3>121</h3><span>Sút</span></div>
-      <div><h3>111</h3><span>Chuyền</span></div>
-      <div><h3>118</h3><span>Rê bóng</span></div>
-      <div><h3>62</h3><span>Phòng thủ</span></div>
-      <div><h3>112</h3><span>Thể lực</span></div>
-    </div>
+      <!-- Detail Stats -->
+      <div class="stats-detail">
+        <div>Sức mạnh: 111</div>
+        <div>Tăng tốc: 120</div>
+        <div>Tốc độ: 120</div>
+        <div>Rê bóng: 120</div>
+        <div>Giữ bóng: 116</div>
+        <div>Nhảy: 125</div>
+        <div>Bình tĩnh: 122</div>
+        <div>Sút xa: 121</div>
+        <div>Vô-lê: 124</div>
+        <div>Chọn vị trí: 124</div>
+        <div>Penalty: 122</div>
+        <div>Lực sút: 124</div>
+      </div>
 
-    <!-- Detail Stats -->
-    <div class="stats-detail">
-      <div>Sức mạnh: 111</div>
-      <div>Tăng tốc: 120</div>
-      <div>Tốc độ: 120</div>
-      <div>Rê bóng: 120</div>
-      <div>Giữ bóng: 116</div>
-      <div>Nhảy: 125</div>
-      <div>Bình tĩnh: 122</div>
-      <div>Sút xa: 121</div>
-      <div>Vô-lê: 124</div>
-      <div>Chọn vị trí: 124</div>
-      <div>Penalty: 122</div>
-      <div>Lực sút: 124</div>
-    </div>
+      <!-- Hidden Skills -->
+      <div class="hidden-skills">
+        <h4>C. Số ẩn</h4>
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_55.png?20250613"> Người không phổi</p>
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_12.png?20250613"> Tạt bóng sớm (AI)</p>
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_15.png?20250613"> Chuyền dài (AI)</p> 
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_13.png?20250613"> Sút xoáy</p>
+        <p><img src="https://fo4players.com/client/img/traits/sut-xa-ai.png"> Sút xa (AI)</p>
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_18.png?20250613"> Kiến tạo (AI)</p>
+      </div>
 
-    <!-- Hidden Skills -->
-    <div class="hidden-skills">
-      <h4>C. Số ẩn</h4>
-      <p><img src="https://fo4players.com/client/img/traits/sat-thu-bang-cat.png" class="badgedss y825">Sát thủ băng cắt</p>
-      </p><img src="https://fo4players.com/client/img/traits/qua-nguoi-ai.png" class="badgedss y825"> Qua người (AI)<p>
-      </p><img src="https://fo4players.com/client/img/traits/sut-ma-ngoai.png" class="badgedss y825"> Sút/Tạt bóng má ngoài,<p> 
-      </p><img src="https://fo4players.com/client/img/traits/danh-dau-manh.png" class="badgedss y825"> Đánh đầu mạnh <p>
-      </p><img src="https://fo4players.com/client/img/traits/sut-xa-ai.png" class="badgedss y825"> Sút xa (AI), <p>
-      </p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_14.png?20250613" class="badgedss y825"> Tinh tế <p>
-    </div>
-
-    <!-- Radar -->
-    <div class="radar">
-      <canvas id="radarChart" width="300" height="300"></canvas>
+      <!-- Radar -->
+      <div class="radar">
+        <canvas id="radarChart" width="300" height="300"></canvas>
+      </div>
     </div>
   </div>
 

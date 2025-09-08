@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>David Beckham - Dramatic Comebacks</title>
+  <title>Alexander Arnold - Dramatic Comebacks</title>
   <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
   <style>
     body {
@@ -12,56 +12,44 @@
       margin: 0;
       padding: 0;
     }
-
-    /* HEADER */
-    .header-bar {
-      width: 100%;
+    /* Header */
+    .top-header {
       background: #1a1a1a;
+      border-bottom: 2px solid #444;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 30px;
-      border-bottom: 2px solid #444;
-      position: fixed;
+      padding: 10px 30px;
+      position: sticky;
       top: 0;
-      left: 0;
-      z-index: 1000;
-      min-height: 60px;
-      box-sizing: border-box;
+      z-index: 10;
     }
-    .logo {
+    .top-header .logo {
       display: flex;
       align-items: center;
+      gap: 10px;
     }
-    .logo img {
-      height: 40px;
+    .top-header .logo img {
+      height: 35px;
     }
-    .nav {
-      display: flex;
-      gap: 30px; /* tăng khoảng cách giữa các mục */
-      align-items: center;
-    }
-    .nav a {
-      text-decoration: none;
+    .top-header nav a {
       color: #fff;
-      padding: 6px 18px;
-      border-radius: 6px;
-      transition: 0.3s;
+      text-decoration: none;
+      margin-left: 20px;
       font-size: 16px;
-      font-weight: bold;
-      white-space: nowrap;
+      transition: color 0.2s, border-bottom 0.2s;
     }
-    .nav a:hover {
-      background: #ffcc00;
-      color: #000;
-      box-shadow: 0 2px 8px rgba(255,204,0,0.2);
+    .top-header nav a:hover {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 2px;
     }
 
-    /* MAIN CONTENT */
+    /* Card */
     .container {
       display: flex;
       justify-content: center;
-      padding: 100px 20px 20px; /* chừa khoảng cho header */
+      padding: 20px;
     }
     .card {
       width: 800px;
@@ -71,7 +59,7 @@
       padding: 20px;
       position: relative;
     }
-    .player-header {
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -143,69 +131,68 @@
   </style>
 </head>
 <body>
-<!-- HEADER -->
-<div class="header-bar">
-  <div class="logo">
-    <a href="index.html">
-      <img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="FC Online Logo">
-    </a>
-  </div>
-  <div class="nav">
-    <a href="index.html">Trang chủ</a>
-    <a href="./news/index.html">Tin tức</a>
-  </div>
-</div>
- 
+  <!-- HEADER -->
+  <header class="top-header">
+    <div class="logo">
+      <a href="spck.html"><img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="spck.html">Trang chủ</a>
+      <a href="./news/index.html">Tin tức</a>
+    </nav>
+  </header>
+
+  <!-- CONTENT -->
   <div class="container">
     <div class="card">
       <!-- Player Header -->
-      <div class="player-header">
+      <div class="header">
         <div class="player-info">
-          <h2>David Beckham <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828"></h2> 
-          <span>CF 119 | ST 119</span><br>
-          <span>REAL MADRID | ENGLAND 🇪🇳</span><br>
-          <span>25.1.1942 </span><br>
-          <span>175cm | 85kg | 5⭐ TECH </span>
+          <h2>Alexander Arnold <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828"></h2> 
+          <span>LB 114 | LWB 114</span><br>
+          <span>LIVERPOOL | ENGLAND 🏴</span><br>
+          <span>16.7.1989 </span><br>
+          <span>180cm | 69kg | 3⭐ TECH </span>
           <br><span>LEFT FOOT: ⭐⭐⭐⭐</span>
           <span>RIGHT FOOT: ⭐⭐⭐⭐⭐</span>
         </div>
         <div class="player-photo">
-          <img src="https://s1.fifaaddict.com/fo4/players/jgpjoqmbn.png?20250613" alt="David Beckham">
+          <img src="https://s1.fifaaddict.com/fo4/players/dydzaaqmb.png?20250613" alt="Alexander Arnold">
         </div>
       </div>
 
       <!-- Overall Stats -->
       <div class="stats-overall">
-        <div><h3>120</h3><span>Tốc độ</span></div>
-        <div><h3>121</h3><span>Sút</span></div>
-        <div><h3>111</h3><span>Chuyền</span></div>
-        <div><h3>118</h3><span>Rê bóng</span></div>
-        <div><h3>62</h3><span>Phòng thủ</span></div>
-        <div><h3>112</h3><span>Thể lực</span></div>
+        <div><h3>117</h3><span>Tốc độ</span></div>
+        <div><h3>106</h3><span>Sút</span></div>
+        <div><h3>120</h3><span>Chuyền</span></div>
+        <div><h3>114</h3><span>Rê bóng</span></div>
+        <div><h3>115</h3><span>Phòng thủ</span></div>
+        <div><h3>108</h3><span>Thể lực</span></div>
       </div>
 
       <!-- Detail Stats -->
       <div class="stats-detail">
-        <div>Sức mạnh: 111</div>
-        <div>Tăng tốc: 120</div>
-        <div>Tốc độ: 120</div>
-        <div>Rê bóng: 120</div>
-        <div>Giữ bóng: 116</div>
-        <div>Nhảy: 125</div>
-        <div>Bình tĩnh: 122</div>
-        <div>Sút xa: 121</div>
-        <div>Vô-lê: 124</div>
-        <div>Chọn vị trí: 124</div>
-        <div>Penalty: 122</div>
-        <div>Lực sút: 124</div>
+        <div>Sức mạnh: 103</div>
+        <div>Tăng tốc: 117</div>
+        <div>Tốc độ: 117</div>
+        <div>Rê bóng: 114</div>
+        <div>Giữ bóng: 115</div>
+        <div>Nhảy: 108</div>
+        <div>Bình tĩnh: 116</div>
+        <div>Sút xa: 118</div>
+        <div>Vô-lê: 99</div>
+        <div>Chọn vị trí: 115</div>
+        <div>Penalty: 95</div>
+        <div>Lực sút: 119</div>
       </div>
 
       <!-- Hidden Skills -->
       <div class="hidden-skills">
         <h4>C. Số ẩn</h4>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_55.png?20250613"> Người không phổi</p>
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_53.png?20250613"> Cao thủ tắc bóng</p>
         <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_12.png?20250613"> Tạt bóng sớm (AI)</p>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_15.png?20250613"> Chuyền dài (AI)</p> 
+        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_15.png?20250613"> Chuyền dài (AI)</p>
         <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_13.png?20250613"> Sút xoáy</p>
         <p><img src="https://fo4players.com/client/img/traits/sut-xa-ai.png"> Sút xa (AI)</p>
         <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_18.png?20250613"> Kiến tạo (AI)</p>
@@ -228,7 +215,7 @@
         labels: ['Tốc độ', 'Sút', 'Chuyền', 'Rê bóng', 'Phòng thủ', 'Thể lực'],
         datasets: [{
           label: 'Chỉ số chính',
-          data: [120, 121, 111, 118, 62, 112],
+          data: [117, 106, 120, 114, 115, 108],
           fill: true,
           backgroundColor: 'rgba(255, 206, 86, 0.2)',
           borderColor: 'rgba(255, 206, 86, 1)',
