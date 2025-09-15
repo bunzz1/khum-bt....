@@ -11,6 +11,8 @@
       color: #fff;
       margin: 0;
       padding: 0;
+            background: url('https://fconline.garena.vn/wp-content/uploads/2025/04/bell.jpg') no-repeat center center fixed;
+       background-size: cover; /* co giãn ảnh full màn hình */
     }
     /* Header */
     .top-header {
@@ -37,10 +39,12 @@
       text-decoration: none;
       margin-left: 20px;
       font-size: 16px;
-      transition: color 0.2s;
+      transition: color 0.2s, border-bottom 0.2s;
     }
     .top-header nav a:hover {
       color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 2px;
     }
 
     /* Card */
@@ -129,17 +133,17 @@
   </style>
 </head>
 <body>
-      <!-- HEADER -->
-  <header>
+  <!-- HEADER -->
+  <header class="top-header">
     <div class="logo">
       <a href="spck.html"><img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="Logo"></a>
     </div>
-    <nav class="menu">
-      <a href="./spck.html">🏠Trang chủ</a>
-      <a href="./news/index.html">📰Tin tức</a>
+    <nav>
+      <a href="spck.html">Trang chủ</a>
+      <a href="./news/index.html">Tin tức</a>
     </nav>
   </header>
- </div>
+
 
   <!-- CONTENT -->
   <div class="container">

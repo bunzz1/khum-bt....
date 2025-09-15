@@ -2,250 +2,417 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>David Beckham - Dramatic Comebacks</title>
-  <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
+  <title>Tìm cầu thủ Continental Heroes FC ONLINE</title>
+    <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
   <style>
-    body {
+     body {
       background: #111;
       font-family: Arial, sans-serif;
       color: #fff;
-      margin: 0;
-      padding: 0;
+      display: flex;
+      justify-content: center;
+      padding: 80px 20px 20px 20px; /* thêm top padding để tránh che bởi header */
+      background: url('https://fconline.garena.vn/wp-content/uploads/2025/04/bell.jpg') no-repeat center center fixed;
+       background-size: cover; /* co giãn ảnh full màn hình */
     }
+    .player-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.player-table th {
+  text-align: left;
+  padding: 8px;
+  background: #2a2a2a;
+  color: #bbb;
+  font-weight: bold;
+}
+
+.player-table td {
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  vertical-align: middle;
+}
+
+.player-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.ovr {
+  color: violet;
+  font-weight: bold;
+}
+
+.sta {
+  color: #00ff99;
+  font-weight: bold;
+}
+
 
     /* HEADER */
-    .header-bar {
-      width: 100%;
-      background: #1a1a1a;
+    header {
+      background: #161b22;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 8px 30px;
-      border-bottom: 2px solid #444;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      min-height: 60px;
-      box-sizing: border-box;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 2px solid #30363d;
     }
+
     .logo {
       display: flex;
       align-items: center;
     }
+
     .logo img {
-      height: 40px;
-    }
-    .nav {
-      display: flex;
-      gap: 30px; /* tăng khoảng cách giữa các mục */
-      align-items: center;
-    }
-    .nav a {
-      text-decoration: none;
-      color: #fff;
-      padding: 6px 18px;
-      border-radius: 6px;
-      transition: 0.3s;
-      font-size: 16px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    .nav a:hover {
-      background: #ffcc00;
-      color: #000;
-      box-shadow: 0 2px 8px rgba(255,204,0,0.2);
+      height: 35px;
+      margin-right: 10px;
+      cursor: pointer;
     }
 
-    /* MAIN CONTENT */
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      background: #1f6feb;
+    }
+
+    /* CONTAINER */
     .container {
-      display: flex;
-      justify-content: center;
-      padding: 100px 20px 20px; /* chừa khoảng cho header */
-    }
-    .card {
-      width: 800px;
-      background: #1a1a1a;
-      border: 2px solid #444;
-      border-radius: 10px;
+      width: 1000px;
+      margin: 30px auto;
+      background: #161b22;
       padding: 20px;
-      position: relative;
+      border-radius: 10px;
+      min-height: 600px;
     }
-    .player-header {
+
+    .search-bar {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .player-info {
-      line-height: 1.4;
-    }
-    .player-info h2 {
-      margin: 0;
-      font-size: 24px;
-      color: #ffcc00;
-    }
-    .player-info span {
-      font-size: 14px;
-      color: #aaa;
-    }
-    .player-photo {
-      width: 150px;
-    }
-    .player-photo img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .stats-overall {
-      display: flex;
-      justify-content: space-around;
-      background: #222;
-      margin: 15px 0;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    .stats-overall div {
-      text-align: center;
-    }
-    .stats-overall h3 {
-      margin: 0;
-      font-size: 22px;
-      color: #ff4444;
-    }
-    .stats-detail {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+      margin-bottom: 15px;
     }
-    .stats-detail div {
-      background: #2a2a2a;
+
+    .search-bar input {
+      flex: 1;
       padding: 8px;
-      border-radius: 6px;
-      font-size: 14px;
+      border: none;
+      border-radius: 5px;
     }
-    .hidden-skills {
-      margin-top: 15px;
-      background: #222;
-      padding: 10px;
-      border-radius: 8px;
+
+    .search-bar button {
+      background: #1f6feb;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
     }
-    .hidden-skills h4 {
-      margin: 0 0 8px 0;
-      color: #ffcc00;
+
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
     }
-    .radar {
-      margin-top: 20px;
-      text-align: center;
+
+    .filters select {
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
     }
-    canvas {
-      background: #111;
-      border-radius: 50%;
+
+    .positions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 20px;
     }
+
+    .positions button {
+      background: #30363d;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+.mua-the {
+  display: flex;
+  gap: 20px;         /* khoảng cách giữa các thẻ */
+  align-items: center; 
+}
+
+.mua {
+  text-align: center;
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mua img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.mua p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
   </style>
 </head>
 <body>
-<!-- HEADER -->
-<div class="header-bar">
-  <div class="logo">
-    <a href="index.html">
-      <img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="FC Online Logo">
-    </a>
-  </div>
-  <div class="nav">
-    <a href="index.html">Trang chủ</a>
-    <a href="./news/index.html">Tin tức</a>
-  </div>
-</div>
- 
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="spck.html"><img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="Logo"></a>
+    </div>
+    <nav class="menu">
+      <a href="spck.html">🏠Trang chủ</a>
+      <a href="index.html">📰Tin tức</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <div class="card">
-      <!-- Player Header -->
-      <div class="player-header">
-        <div class="player-info">
-          <h2>David Beckham <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828"></h2> 
-          <span>CF 119 | ST 119</span><br>
-          <span>REAL MADRID | ENGLAND 🇪🇳</span><br>
-          <span>25.1.1942 </span><br>
-          <span>175cm | 85kg | 5⭐ TECH </span>
-          <br><span>LEFT FOOT: ⭐⭐⭐⭐</span>
-          <span>RIGHT FOOT: ⭐⭐⭐⭐⭐</span>
-        </div>
-        <div class="player-photo">
-          <img src="https://s1.fifaaddict.com/fo4/players/jgpjoqmbn.png?20250613" alt="David Beckham">
-        </div>
+    <!-- Seasons -->
+    <h3 style="margin-top:0;">Các mùa thẻ</h3>
+    <div class="mua-the">
+      <div class="mua">
+        <a href="./CH.html">
+          <img src="https://i.fo4players.com/property/class/class2011.png?t=20250828" alt="CH">
+          <p>CH</p>
+        </a>
       </div>
-
-      <!-- Overall Stats -->
-      <div class="stats-overall">
-        <div><h3>120</h3><span>Tốc độ</span></div>
-        <div><h3>121</h3><span>Sút</span></div>
-        <div><h3>111</h3><span>Chuyền</span></div>
-        <div><h3>118</h3><span>Rê bóng</span></div>
-        <div><h3>62</h3><span>Phòng thủ</span></div>
-        <div><h3>112</h3><span>Thể lực</span></div>
+      <div class="mua">
+        <a href="./DCB.html">
+          <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828" alt="DCB">
+          <p>DCB</p>
+        </a>
       </div>
-
-      <!-- Detail Stats -->
-      <div class="stats-detail">
-        <div>Sức mạnh: 111</div>
-        <div>Tăng tốc: 120</div>
-        <div>Tốc độ: 120</div>
-        <div>Rê bóng: 120</div>
-        <div>Giữ bóng: 116</div>
-        <div>Nhảy: 125</div>
-        <div>Bình tĩnh: 122</div>
-        <div>Sút xa: 121</div>
-        <div>Vô-lê: 124</div>
-        <div>Chọn vị trí: 124</div>
-        <div>Penalty: 122</div>
-        <div>Lực sút: 124</div>
-      </div>
-
-      <!-- Hidden Skills -->
-      <div class="hidden-skills">
-        <h4>C. Số ẩn</h4>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_55.png?20250613"> Người không phổi</p>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_12.png?20250613"> Tạt bóng sớm (AI)</p>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_15.png?20250613"> Chuyền dài (AI)</p> 
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_13.png?20250613"> Sút xoáy</p>
-        <p><img src="https://fo4players.com/client/img/traits/sut-xa-ai.png"> Sút xa (AI)</p>
-        <p><img src="https://s1.fifaaddict.com/fo4/traits/trait_icon_18.png?20250613"> Kiến tạo (AI)</p>
-      </div>
-
-      <!-- Radar -->
-      <div class="radar">
-        <canvas id="radarChart" width="300" height="300"></canvas>
+      <div class="mua">
+        <a href="./25TOTS.html">
+          <img src="https://i.fo4players.com/property/class/class1992.jpg?t=20250627" alt="25TOTS">
+          <p>25TOTS</p>
+        </a>
       </div>
     </div>
-  </div>
 
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('radarChart');
-    new Chart(ctx, {
-      type: 'radar',
-      data: {
-        labels: ['Tốc độ', 'Sút', 'Chuyền', 'Rê bóng', 'Phòng thủ', 'Thể lực'],
-        datasets: [{
-          label: 'Chỉ số chính',
-          data: [120, 121, 111, 118, 62, 112],
-          fill: true,
-          backgroundColor: 'rgba(255, 206, 86, 0.2)',
-          borderColor: 'rgba(255, 206, 86, 1)',
-          pointBackgroundColor: 'yellow'
-        }]
-      },
-      options: {
-        scales: {
-          r: {
-            angleLines: { color: '#444' },
-            grid: { color: '#333' },
-            pointLabels: { color: '#fff' }
-          }
-        },
-        plugins: { legend: { display: false } }
-      }
-    });
-  </script>
+    <!-- Table: cầu thủ -->
+    <div style="margin-top:32px;">
+      <table class="player-table">
+        <thead>
+          <tr>
+            <th>POS</th>
+            <th>NAME</th>
+            <th>FP</th>
+            <th>OVR</th>
+            <th>STA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ST</td>
+            <td>
+              <a href="./van-basten-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/dydzqvrky.png?20250613" class="player-img">
+                Marco van Basten
+              </a>
+            </td>
+            <td>30</td>
+            <td class="ovr">121</td>
+            <td class="sta">123</td>
+          </tr>
+          <tr>
+            <td>ST</td>
+            <td>
+              <a href="./torres-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/zlmnljpzd.png?20250613" class="player-img">
+                Fernando Torres
+              </a>
+            </td>
+            <td>32</td>
+            <td class="ovr">119</td>
+            <td class="sta">116</td>
+          </tr>
+          <tr>
+            <td>GK</td>
+            <td>
+              <a href="./donnarumma-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/vgmvzyldr.png?20250613" class="player-img">
+                Gianluigi Donnarumma
+              </a>
+            </td>
+            <td>28</td>
+            <td class="ovr">119</td>
+            <td class="sta">79</td>
+          </tr>
+          <tr>
+            <td>LW</td>
+            <td>
+              <a href="./di-maria-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/dydzqkdlm.png?20250613" class="player-img">
+                Ángel Di María
+              </a>
+            </td>
+            <td>29</td>
+            <td class="ovr">119</td>
+            <td class="sta">112</td>
+          </tr>
+          <tr>
+            <td>CM</td>
+            <td>
+              <a href="./gullit-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/opaywnwwq.png?20250613" class="player-img">
+                Ruud Gullit
+              </a>
+            </td>
+            <td>31</td>
+            <td class="ovr">119</td>
+            <td class="sta">109</td>
+          </tr>
+          <tr>
+            <td>CM</td>
+            <td>
+              <a href="./xavi-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/zlmnlajym.png?20250613" class="player-img">
+                Xavi Hernández
+              </a>
+            </td>
+            <td>33</td>
+            <td class="ovr">120</td>
+            <td class="sta">112</td>
+          </tr>
+          <tr>
+            <td>LB</td>
+            <td>
+              <a href="./roberto-carlos-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/njbqjdoqr.png?20250613" class="player-img">
+                Roberto Carlos
+              </a>
+            </td>
+            <td>28</td>
+            <td class="ovr">120</td>
+            <td class="sta">116</td>
+          </tr>
+          <tr>
+            <td>RW</td>
+            <td>
+              <a href="./messi-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/njbqwbvdv.png?20250613" class="player-img">
+                Lionel Messi
+              </a>
+            </td>
+            <td>30</td>
+            <td class="ovr">118</td>
+            <td class="sta">110</td>
+          </tr>
+          <tr>
+            <td>CB</td>
+            <td>
+              <a href="./desailly-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/jgpjgqwdj.png?20250613" class="player-img">
+                Marcel Desailly
+              </a>
+            </td>
+            <td>32</td>
+            <td class="ovr">119</td>
+            <td class="sta">110</td>
+          </tr>
+          <tr>
+            <td>CB</td>
+            <td>
+              <a href="./beckenbauer-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/mzqnwygjl.png?20250613" class="player-img">
+                Franz Beckenbauer
+              </a>
+            </td>
+            <td>31</td>
+            <td class="ovr">120</td>
+            <td class="sta">112</td>
+          </tr>
+          <tr>
+            <td>RB</td>
+            <td>
+              <a href="./cafu-ch.html" style="color: white; text-decoration: none;">
+                <img src="https://s1.fifaaddict.com/fo4/players/pkvdkwpmp.png?20250613" class="player-img">
+                Cafú
+              </a>
+            </td>
+            <td>27</td>
+            <td class="ovr">117</td>
+            <td class="sta">120</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <style>
+  /* HEADER */
+  header {
+    background: #161b22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo trái, menu phải */
+    padding: 12px 24px;
+    border-bottom: 2px solid #30363d;
+    position: fixed;   /* giữ cố định header khi cuộn */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .logo img {
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+
+  .menu a:hover {
+    background: #1f6feb;
+  }
+
+  /* để nội dung không bị che */
+  body {
+    padding-top: 70px;
+  }
+</style>
 </body>
 </html>
