@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>EA SPORTS FC ONLINE</title>
-    <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
+  <link rel="icon" type="image/png" href="https://cdn-gop.garenanow.com/gop/app/0000/032/837/icon.png">
+
+  <!-- BOOTSTRAP 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,11 +16,9 @@
       color: #fff;
       margin: 0;
       padding: 0;
-        background: url('https://fconline.garena.vn/wp-content/uploads/2025/04/bell.jpg') no-repeat center center fixed;
-       background-size: cover; /* co giãn ảnh full màn hình */
+      background: url('https://fconline.garena.vn/wp-content/uploads/2025/04/bell.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-
-    /* HEADER */
     header {
       background: #161b22;
       display: flex;
@@ -24,23 +27,15 @@
       padding: 10px 20px;
       border-bottom: 2px solid #30363d;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
     .logo img {
       height: 35px;
       margin-right: 10px;
       cursor: pointer;
     }
-
     .menu {
       display: flex;
       gap: 20px;
     }
-
     .menu a {
       color: #fff;
       text-decoration: none;
@@ -49,12 +44,9 @@
       border-radius: 5px;
       transition: 0.2s;
     }
-
     .menu a:hover {
       background: #1f6feb;
     }
-
-    /* CONTAINER */
     .container {
       width: 1000px;
       margin: 30px auto;
@@ -62,101 +54,36 @@
       padding: 20px;
       border-radius: 10px;
     }
-
-    .search-bar {
+    .mua-the-center {
       display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
+      gap: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
-
-    .search-bar input {
-      flex: 1;
-      padding: 8px;
-      border: none;
-      border-radius: 5px;
+    .mua {
+      text-align: center;
+      background: #1c1c1c;
+      padding: 10px;
+      border-radius: 8px;
     }
-
-    .search-bar button {
-      background: #1f6feb;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
+    .mua img {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto;
     }
-
-    .filters {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
+    .mua p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #fff;
     }
-
-    .filters select {
-      padding: 6px;
-      border-radius: 5px;
-      border: none;
-      width: 100%;
-    }
-
-    .positions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 20px;
-    }
-
-    .positions button {
-      background: #30363d;
-      border: none;
-      padding: 6px 10px;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-      font-size: 12px;
-    }
-
-.mua-the {
-  display: flex;
-  gap: 20px;         /* khoảng cách giữa các thẻ */
-  align-items: center; 
-}
-
-.mua {
-  text-align: center;
-  background: #1c1c1c;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.mua img {
-  width: 60px;
-  height: 60px;
-  display: block;
-  margin: 0 auto;
-}
-.mua p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #fff;
-}
-
-.mua-the-center {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
-    margin-top: 0;
-  }
-  </style>
-
   </style>
 </head>
 <body>
 
-      <!-- HEADER -->
+  <!-- HEADER -->
   <header>
     <div class="logo">
       <a href="spck.html"><img src="https://fconline.garena.vn/wp-content/uploads/2023/09/logo.png" alt="Logo"></a>
@@ -166,41 +93,73 @@
       <a href="index.html">📰Tin tức</a>
     </nav>
   </header>
- </div>
-    <!-- Seasons -->
-<div class="container">
-  <h3 style="margin-top:0;">Các mùa thẻ</h3>
-  <div class="mua-the-center">
-    <div class="mua">
-      <a href="./CH.html">
-        <img src="https://i.fo4players.com/property/class/class2011.png?t=20250828" alt="CH">
-        <p>CH</p>
-      </a>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h3 style="margin-top:0;">Các mùa thẻ</h3>
+    <div class="mua-the-center">
+      <div class="mua">
+        <a href="./CH.html">
+          <img src="https://i.fo4players.com/property/class/class2011.png?t=20250828" alt="CH">
+          <p>CH</p>
+        </a>
+      </div>
+      <div class="mua">
+        <a href="./DCB.html">
+          <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828" alt="DCB">
+          <p>DCB</p>
+        </a>
+      </div>
+      <div class="mua">
+        <a href="./25TOTS.html">
+          <img src="https://i.fo4players.com/property/class/class1992.jpg?t=20250627" alt="25TOTS">
+          <p>25TOTS</p>
+        </a>
+      </div>
     </div>
-    <div class="mua">
-      <a href="./DCB.html">
-        <img src="https://i.fo4players.com/property/class/class2010.png?t=20250828" alt="DCB">
-        <p>DCB</p>
-      </a>
+
+    <!-- BOOTSTRAP SLIDER -->
+    <div id="eventCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner rounded">
+       <a href="25TOTS.html" target="_blank">
+        <div class="carousel-item active">
+          <img src="https://gamek.mediacdn.vn/133514250583805952/2025/6/30/f3eafa3e-17512809660771184974807.png" class="d-block w-100" alt="25TOTS">
+        </div>
+        <div class="carousel-item">
+        <a href="DCB.html" target="_blank">
+          <img src="https://fconline.garena.vn/wp-content/uploads/2025/08/KV_DCB_1920x1080.png" class="d-block w-100" alt="DCB">
+        </div>
+        <div class="carousel-item">
+       <a href="CH.html" target="_blank">
+          <img src="https://fconline.garena.vn/wp-content/uploads/2025/07/KV_ContinentalHeroes_1920x1080.png" class="d-block w-100" alt="CH">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
-    <div class="mua">
-      <a href="./25TOTS.html">
-        <img src="https://i.fo4players.com/property/class/class1992.jpg?t=20250627" alt="25TOTS">
-        <p>25TOTS</p>
-      </a>
-    </div>
+
   </div>
-</div>
-<footer style="background:#000; color:#fff; text-align:center; padding:32px 0 18px 0; margin-top:40px;">
-  <img src="https://fconline.garena.vn/wp-content/themes/fc-online/assets/img/logos.png?ver=1.0" alt="FC Online Garena" style="height:48px; margin-bottom:18px;">
-  <div style="max-width:900px; margin:auto; font-size:15px; line-height:1.7;">
-    CÔNG TY CỔ PHẦN GIẢI TRÍ VÀ THỂ THAO ĐIỆN TỬ VIỆT NAM<br>
-    QUYẾT ĐỊNH PHÁT HÀNH TRÒ CHƠI ĐIỆN TỬ G1 TRÊN MẠNG: SỐ 1868/QĐ-BTTTT NGÀY 28/9/2023.<br>
-    ĐỊA CHỈ: TẦNG 6, TÒA NHÀ CAPITAL PLACE, 29 LIỄU GIAI, PHƯỜNG NGỌC HÀ, THÀNH PHỐ HÀ NỘI, VIỆT NAM.<br>
-    ĐIỆN THOẠI LIÊN HỆ: 024 7305 3939<br>
-    EMAIL: LEGAL@GARENA.VN
-</footer>
-  </div>
-<!-- ...existing code... -->
+
+  <!-- FOOTER -->
+  <footer style="background:#000; color:#fff; text-align:center; padding:32px 0 18px 0; margin-top:40px;">
+    <img src="https://fconline.garena.vn/wp-content/themes/fc-online/assets/img/logos.png?ver=1.0" alt="FC Online Garena" style="height:48px; margin-bottom:18px;">
+    <div style="max-width:900px; margin:auto; font-size:15px; line-height:1.7;">
+      CÔNG TY CỔ PHẦN GIẢI TRÍ VÀ THỂ THAO ĐIỆN TỬ VIỆT NAM<br>
+      QUYẾT ĐỊNH PHÁT HÀNH TRÒ CHƠI ĐIỆN TỬ G1 TRÊN MẠNG: SỐ 1868/QĐ-BTTTT NGÀY 28/9/2023.<br>
+      ĐỊA CHỈ: TẦNG 6, TÒA NHÀ CAPITAL PLACE, 29 LIỄU GIAI, PHƯỜNG NGỌC HÀ, THÀNH PHỐ HÀ NỘI, VIỆT NAM.<br>
+      ĐIỆN THOẠI LIÊN HỆ: 024 7305 3939<br>
+      EMAIL: LEGAL@GARENA.VN
+    </div>
+  </footer>
+
 </body>
 </html>
